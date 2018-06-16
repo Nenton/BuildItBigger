@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ImageLibrary</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>
