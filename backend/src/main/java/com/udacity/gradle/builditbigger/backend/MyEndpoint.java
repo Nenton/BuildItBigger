@@ -5,8 +5,6 @@ import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
 import com.nenton.javajokes.Joker;
 
-import javax.inject.Named;
-
 /**
  * An endpoint class we are exposing
  */
@@ -20,17 +18,6 @@ import javax.inject.Named;
         )
 )
 public class MyEndpoint {
-
-    /**
-     * A simple endpoint method that takes a name and says Hi back
-     */
-    @ApiMethod(name = "sayHi", path = "", httpMethod = ApiMethod.HttpMethod.GET)
-    public MyBean sayHi(@Named("name") String name) {
-        MyBean response = new MyBean();
-        response.setData("Hi, " + name);
-
-        return response;
-    }
 
     @ApiMethod(name = "getJoke")
     public MyBean getJoke() {
